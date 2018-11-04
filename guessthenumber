@@ -1,0 +1,20 @@
+import random
+print("Hello, what is your name")
+name = input()
+print("Well, ", name, " I am thinking of a number between 1 and 20.\nTake a guess")
+num =input()
+secret_num = random.randint(1,20)
+
+for i in range(5):
+    if secret_num == int(num):
+        print("Brilliant, you got it right")
+        break
+    elif int(num) < secret_num:
+        print("Your numer is smaller than my number.\nTake a guess again")
+        num=input()
+        continue
+    else:
+        print("Your numer is greater than my number.\nTake a guess again")
+        num=input()
+        continue
+print("Sorry, the number was ", secret_num)
